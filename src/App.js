@@ -73,6 +73,7 @@ function App() {
       </div>
       <h1>{`${currentTurn}'s turn`}</h1>
       <h1><a onClick={onReset}>Reset</a></h1>
+      <h5><a href='https://github.com/kambielawski/connect4'>source</a></h5>
     </div>
   );
 }
