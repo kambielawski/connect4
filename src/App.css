@@ -1,38 +1,58 @@
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.column {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: grey;
+}
+
+.fullColumn {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: grey;
+  animation: columnFull;
+  animation-duration: 0.5s;
+}
+
+.emptyColumn {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: grey;
+  animation: columnEmpty;
+  animation-duration: 0.5s;
+}
+
+.boardContainer {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes columnFull {
+  0% {background-color: red;}
+  100% {background-color: grey;}
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes columnEmpty {
+  0% {background-color: green;}
+  100% {background-color: grey;}
 }
